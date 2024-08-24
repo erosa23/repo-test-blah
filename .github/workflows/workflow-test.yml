@@ -1,0 +1,12 @@
+name: workflow-test
+on: push
+env:
+  user_to_disconnect: 'asdf.asdf'
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: curl ifconfig.me
+      - name: my-step2
+        run: echo $user_to_disconnect
